@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_top_rect">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/extra_small_gap"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/search_input"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_button"
+            android:layout_width="@dimen/solid_button_min_height"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/normal_gap"
+            android:layout_marginEnd="@dimen/extra_small_gap"
+            android:visibility="gone"
+            app:cardBackgroundColor="?buttonBackgroundColor"
+            app:cardCornerRadius="@dimen/small_corner_radius"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?selectableItemBackground"
+                android:padding="@dimen/normal_gap"
+                android:src="@drawable/ic_24_filter_list" />
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/primary_button"
+                style="@style/Widget.Coinroad.SolidButton.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/normal_gap"
+                android:gravity="start|center_vertical"
+                tools:drawableEnd="@drawable/ic_24_plus"
+                tools:text="@string/home_new_graph" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/accent_button"
+                style="@style/Widget.Coinroad.SolidButton.Accent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/normal_gap"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:text="@string/creating_add_graph" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_input"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/extra_small_gap"
+        android:layout_marginTop="@dimen/normal_gap"
+        android:layout_marginBottom="@dimen/normal_gap"
+        android:visibility="gone"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="16dp"
+        tools:visibility="visible">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_edit_text"
+            style="@style/Widget.Coinroad.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:hint="@string/search_coins_hint"
+            android:inputType="text"
+            android:textColorHint="@color/gray_c" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

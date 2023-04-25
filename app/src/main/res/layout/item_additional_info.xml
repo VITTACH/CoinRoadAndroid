@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/extra_small_gap"
+    app:cardBackgroundColor="?notificationBackgroundColor"
+    app:cardCornerRadius="@dimen/small_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:paddingBottom="@dimen/small_gap">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extra_small_gap"
+            android:layout_marginTop="@dimen/small_gap"
+            android:layout_weight="1"
+            android:text="@string/widget_ad_info_title"
+            android:textAppearance="@style/Text.Caption"
+            android:textColor="?secondaryTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/close_info_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/small_gap"
+            android:src="@drawable/ic_24_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?secondaryTextColor" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extra_small_gap"
+            android:text="[1]"
+            android:textAppearance="@style/Text.Caption.Accent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/first_line"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/first_line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:text="@string/widget_ad_info_first_line"
+            android:textAppearance="@style/Text.Caption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/close_info_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extra_small_gap"
+            android:text="[2]"
+            android:textAppearance="@style/Text.Caption"
+            android:textColor="@color/purple_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/second_line"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/second_line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:text="@string/widget_ad_info_second_line"
+            android:textAppearance="@style/Text.Caption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/first_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/extra_small_gap"
+            android:layout_height="wrap_content"
+            android:text="[3]"
+            android:textAppearance="@style/Text.Caption"
+            android:textColor="@color/yellow_anight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/third_line"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/third_line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:text="@string/widget_ad_info_third_line"
+            android:textAppearance="@style/Text.Caption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/second_line" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,39 @@
+apply from: "dependencies.gradle"
+
+buildscript {
+    ext {
+        kotlinVersion = "1.5.31"
+        koinVersion = "3.1.2"
+        crashlyticsPluginVersion = "2.4.1"
+        gradleVersion = "7.0.1"
+        gmsPlugionVersion = "4.3.4"
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion"
+        classpath "io.insert-koin:koin-gradle-plugin:$koinVersion"
+        classpath "com.google.gms:google-services:$gmsPlugionVersion"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$crashlyticsPluginVersion"
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://kotlin.bintray.com/kotlinx/" }
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

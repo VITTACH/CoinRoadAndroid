@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bar_rising_night">#55ab6e</color>
+    <color name="bar_falling_night">#f0696a</color>
+
+    <color name="purple_a">#6E2FF1</color>
+    <color name="purple_anight">#6E2FF1</color>
+    <color name="purple_bnight">#170a33</color>
+    <color name="purple_cnight">#0e061f</color>
+    <color name="black">#FFFFFF</color>
+    <color name="blacknight">#000000</color>
+    <color name="black_b">#2A2A2A</color>
+    <color name="black_bnight">#2A2A2A</color>
+    <color name="black_translucent_10">#1A000000</color>
+    <color name="black_translucent_20">#33000000</color>
+    <color name="blue_a">#b3e5fc</color>
+    <color name="blue_b">#1e88e5</color>
+    <color name="gray_a">#F2F4FB</color>
+    <color name="gray_anight">#130f1a</color>
+    <color name="gray_b">#7A838D</color>
+    <color name="gray_bnight">#7A838D</color>
+    <color name="gray_c">#292929</color>
+    <color name="gray_cnight">#292929</color>
+    <color name="gray_e">#BFC2C3</color>
+    <color name="gray_d">#acafb0</color>
+    <color name="gray_enight">#5C5C5C</color>
+    <color name="green_a">#00BA98</color>
+    <color name="green_anight">#00BA98</color>
+    <color name="green_b">#DEFFF9</color>
+    <color name="green_bnight">#133731</color>
+    <color name="red_a">#FA2475</color>
+    <color name="red_anight">#E30F5C</color>
+    <color name="red_b">#FFDBE9</color>
+    <color name="red_bnight">#3F1525</color>
+    <color name="yellow_a">#FD9800</color>
+    <color name="yellow_anight">#FFE500</color>
+    <color name="white">#000000</color>
+    <color name="whitenight">#FFFFFF</color>
+
+</resources>

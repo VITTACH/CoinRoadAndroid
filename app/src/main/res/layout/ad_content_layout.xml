@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/advert_item_height"
+    android:padding="@dimen/extra_small_gap">
+
+    <ImageView
+        android:id="@+id/ad_image_view"
+        android:layout_width="@dimen/advert_image_height"
+        android:layout_height="@dimen/advert_image_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_24_alerts" />
+
+    <TextView
+        android:id="@+id/ad_title_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="2dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/gray_enight"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/ad_close_view"
+        app:layout_constraintStart_toEndOf="@+id/ad_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/ad_body_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:textColor="@color/gray_enight"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/ad_action_view"
+        app:layout_constraintEnd_toStartOf="@+id/ad_close_view"
+        app:layout_constraintStart_toStartOf="@+id/ad_title_view"
+        app:layout_constraintTop_toBottomOf="@+id/ad_title_view"
+        tools:text="Modern minimalist home goods" />
+
+    <TextView
+        android:id="@+id/ad_action_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/extra_small_gap"
+        android:textAppearance="?android:textAppearanceButton"
+        android:textColor="@color/yellow_a"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Visit site now Visit" />
+
+    <TextView
+        android:id="@+id/ad_company_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="@dimen/extra_small_gap"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/gray_enight"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ad_action_view"
+        app:layout_constraintEnd_toStartOf="@+id/ad_action_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ad_badge_view"
+        tools:text="Nesti Furnishings Decor Nesti" />
+
+    <ImageButton
+        android:id="@+id/ad_close_view"
+        android:layout_width="@dimen/medium_gap"
+        android:layout_height="@dimen/medium_gap"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_24_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ad_badge_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_rect"
+        android:paddingHorizontal="@dimen/most_small_gap"
+        android:text="Ad"
+        android:textColor="@color/gray_enight"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ad_company_view"
+        app:layout_constraintStart_toStartOf="@+id/ad_title_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

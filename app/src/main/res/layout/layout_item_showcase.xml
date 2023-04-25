@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/extra_small_gap"
+    app:cardBackgroundColor="?attr/accentColor"
+    app:cardCornerRadius="@dimen/small_corner_radius"
+    app:cardElevation="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:minHeight="@dimen/showcase_min_height"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_gap"
+            android:layout_marginTop="@dimen/normal_gap"
+            android:src="@drawable/lock_screen_showcase"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_gap"
+            android:layout_marginTop="@dimen/normal_gap"
+            android:ems="12"
+            android:textAppearance="@style/Text.Caption"
+            android:textColor="@color/black"
+            tools:text="@string/showcase_graph_visible" />
+
+        <TextView
+            android:id="@+id/action_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/small_gap"
+            android:layout_marginEnd="@dimen/normal_gap"
+            android:layout_marginBottom="@dimen/normal_gap"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:paddingVertical="@dimen/most_small_gap"
+            android:textAppearance="@style/Text.Caption"
+            android:textColor="@color/black"
+            tools:text="@string/showcase_got_it" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

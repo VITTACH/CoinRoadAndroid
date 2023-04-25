@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?windowBackgroundColor">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_24_back"
+        app:title="@string/alerts_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alerts_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/big_gap"
+        android:translationY="@dimen/small_gap"
+        app:layout_constraintBottom_toTopOf="@id/bottom_view"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_alert" />
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/medium_gap"
+        android:background="@drawable/bottom_shadow_gradient"
+        android:translationY="-12dp"
+        app:layout_constraintTop_toTopOf="@id/bottom_view" />
+
+    <include
+        android:id="@+id/bottom_view"
+        layout="@layout/item_bottom_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

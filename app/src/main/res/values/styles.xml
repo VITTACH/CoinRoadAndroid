@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Coinroad.DefaultTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/Text.Body</item>
+    </style>
+
+    <style name="Widget.Coinroad.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:background">?toolbarBackgroundColor</item>
+        <item name="android:elevation">@dimen/toolbar_elevation</item>
+        <item name="titleTextAppearance">@style/Text.Title</item>
+        <item name="titleMarginStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="titleTextColor">?textColor</item>
+        <item name="colorOnPrimary">?iconColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+        <item name="shapeAppearance">@null</item>
+    </style>
+
+    <style name="IconButton">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:tint">?iconColor</item>
+    </style>
+
+    <style name="IconButton.Accent">
+        <item name="android:textColor">@color/red_a</item>
+        <item name="android:tint">?accentColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/Text.Caption</item>
+        <item name="android:minHeight">@dimen/text_button_min_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.Coinroad.TextButton.Accent">
+        <item name="android:textColor">?accentColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.DialogButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/Text.Caption</item>
+    </style>
+
+    <style name="Widget.Coinroad.DialogButton.Positive">
+        <item name="android:textColor">?errorColor</item>
+        <item name="android:textAppearance">@style/Text.Button.Positive</item>
+    </style>
+
+    <style name="Widget.Coinroad.DialogButton.Negative">
+        <item name="android:textColor">?textColor</item>
+        <item name="android:textAppearance">@style/Text.Button.Negative</item>
+    </style>
+
+    <style name="Widget.Coinroad.CardViewButton" parent="Widget.MaterialComponents.CardView">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?selectableItemBackgroundBorderless</item>
+        <item name="cardBackgroundColor">?attr/windowBackgroundColor</item>
+        <item name="cardCornerRadius">@dimen/small_corner_radius</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="Widget.Coinroad.SolidButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/Text.Body</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">@dimen/solid_button_min_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">@dimen/small_corner_radius</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.Coinroad.SolidButton.Primary">
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">?buttonBackgroundColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.SolidButton.Secondary">
+        <item name="backgroundTint">?secondaryButtonBackgroundColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.SolidButton.Accent">
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">?accentButtonBackgroundColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="backgroundTint">?secondaryButtonBackgroundColor</item>
+        <item name="android:alpha">1</item>
+        <item name="actionTextColorAlpha">1</item>
+        <item name="android:paddingLeft">@dimen/small_gap</item>
+        <item name="android:paddingTop">@dimen/most_small_gap</item>
+        <item name="android:paddingBottom">@dimen/most_small_gap</item>
+        <item name="android:paddingRight">@dimen/small_gap</item>
+        <item name="android:layout_margin">@dimen/normal_gap</item>
+    </style>
+
+    <style name="Widget.Coinroad.SnackbarButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/Text.Button.Snackbar</item>
+        <item name="android:textColor">?accentColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.SnackbarText" parent="Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:textAppearance">@style/Text.Body.Snackbar</item>
+        <item name="android:textColor">?textColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.ToggleButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/Text.Caption</item>
+        <item name="android:minHeight">@dimen/toggle_button_min_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="backgroundTint">?secondaryButtonBackgroundColor</item>
+        <item name="cornerRadius">@dimen/small_corner_radius</item>
+    </style>
+
+    <style name="ChartView">
+        <item name="domainLineColor">?chartLinesColor</item>
+        <item name="domainLineThickness">0.6dp</item>
+        <item name="domainOriginLineColor">?chartLinesColor</item>
+        <item name="domainOriginLineThickness">0.6dp</item>
+        <item name="rangeLineColor">?chartLinesColor</item>
+        <item name="rangeLineThickness">0.6dp</item>
+        <item name="rangeOriginLineColor">?chartLinesColor</item>
+        <item name="rangeOriginLineThickness">0.6dp</item>
+        <item name="graphBackgroundColor">?notificationBackgroundColor</item>
+        <item name="graphHeight">1.0</item>
+        <item name="graphHeightMode">fill</item>
+        <item name="graphWidth">1.0</item>
+        <item name="graphWidthMode">fill</item>
+        <item name="gridBackgroundColor">?notificationBackgroundColor</item>
+        <item name="gridInsetLeft">11dp</item>
+        <item name="barFallingColor">?barFallingColor</item>
+        <item name="barRisingColor">?barRisingColor</item>
+        <item name="helpColor">?helpColor</item>
+        <item name="secondaryTextColor">?fadeTextColor</item>
+        <item name="lineLabelColor">?lineLabelColor</item>
+        <item name="lineLabels">left|bottom</item>
+        <item name="textColor">?textColor</item>
+    </style>
+
+    <style name="Widget.Coinroad.CustomAppsDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="windowFixedHeightMajor">63%</item>
+        <item name="windowFixedHeightMinor">63%</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/edit_text_box_border_primary</item>
+        <item name="boxBackgroundColor">?textInputBackgroundColor</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/small_gap</item>
+        <item name="boxCornerRadiusTopStart">@dimen/small_gap</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/small_gap</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/small_gap</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintAnimationEnabled">false</item>
+    </style>
+
+    <style name="TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/edit_text_box_border_secondary</item>
+        <item name="boxBackgroundColor">?windowBackgroundColor</item>
+        <item name="boxStrokeErrorColor">@color/red_a</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/small_gap</item>
+        <item name="boxCornerRadiusTopStart">@dimen/small_gap</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/small_gap</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/small_gap</item>
+        <item name="android:textColorHint">@color/gray_b</item>
+        <item name="hintTextAppearance">@style/Text.Title</item>
+        <item name="hintEnabled">true</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintAnimationEnabled">false</item>
+    </style>
+
+    <style name="Widget.Coinroad.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/Text.Body</item>
+    </style>
+
+    <style name="Widget.Coinroad.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicatorColor">?iconColor</item>
+        <item name="android:background">?windowBackgroundColor</item>
+        <item name="tabTextAppearance">@style/Text.Caption.Small</item>
+        <item name="tabSelectedTextColor">?textColor</item>
+        <item name="tabTextColor">?unselectedTabColor</item>
+    </style>
+
+    <!-- android:stateListAnimator="@null" -->
+    <style name="Widget.Coinroad.PurchaseButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:minHeight">48dp</item>
+        <item name="backgroundTint">@color/green_a</item>
+        <item name="android:textColor">@color/gray_e</item>
+        <item name="android:textAppearance">
+            @style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored
+        </item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+</resources>

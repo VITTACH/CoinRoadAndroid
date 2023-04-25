@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/deep_link_button"
+        style="@style/Widget.Coinroad.CardViewButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/most_small_gap"
+        android:layout_weight="1"
+        android:background="?attr/secondaryButtonBackgroundColor">
+
+        <TextView
+            style="@style/Widget.Coinroad.ToggleButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/small_gap"
+            android:paddingEnd="@dimen/extra_small_gap"
+            android:text="@string/on_tap"
+            android:textAppearance="@style/Text.Caption.Small" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/Widget.Coinroad.TextButton.Accent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/extra_small_gap"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:clickable="false"
+            android:singleLine="true"
+            android:text="@string/add_app"
+            android:textAppearance="@style/Text.Caption.Small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/visibility_button"
+        style="@style/Widget.Coinroad.CardViewButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/secondaryButtonBackgroundColor">
+
+        <TextView
+            style="@style/Widget.Coinroad.ToggleButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/small_gap"
+            android:paddingEnd="@dimen/extra_small_gap"
+            android:singleLine="true"
+            android:text="@string/show_push"
+            android:textAppearance="@style/Text.Caption.Small" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/push_visible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/extra_small_gap" />
+    </LinearLayout>
+
+</LinearLayout>

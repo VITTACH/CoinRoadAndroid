@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/advert_item_height">
+
+    <ImageView
+        android:id="@+id/ad_image_view"
+        android:layout_width="@dimen/advert_image_height"
+        android:layout_height="@dimen/advert_image_height"
+        android:layout_margin="@dimen/extra_small_gap"
+        android:background="?attr/skeletonTintColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ad_title_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/extra_small_gap"
+        android:layout_marginTop="@dimen/extra_small_gap"
+        android:layout_marginBottom="@dimen/extra_small_gap"
+        android:background="@drawable/rounded_rect"
+        android:backgroundTint="?attr/skeletonTintColor"
+        app:layout_constraintBottom_toTopOf="@+id/ad_body_view2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline1"
+        app:layout_constraintStart_toEndOf="@+id/ad_image_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ad_body_view2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:layout_marginBottom="@dimen/most_small_gap"
+        android:background="@drawable/rounded_rect"
+        android:backgroundTint="?attr/skeletonTintColor"
+        app:layout_constraintBottom_toTopOf="@+id/ad_body_view"
+        app:layout_constraintEnd_toStartOf="@+id/ad_close_view"
+        app:layout_constraintStart_toStartOf="@+id/ad_title_view"
+        app:layout_constraintTop_toBottomOf="@+id/ad_title_view" />
+
+    <View
+        android:id="@+id/ad_body_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/extra_small_gap"
+        android:background="@drawable/rounded_rect"
+        android:backgroundTint="?attr/skeletonTintColor"
+        app:layout_constraintBottom_toTopOf="@+id/ad_company_view"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/ad_title_view"
+        app:layout_constraintTop_toBottomOf="@+id/ad_body_view2" />
+
+    <View
+        android:id="@+id/ad_company_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:layout_marginBottom="@dimen/extra_small_gap"
+        android:background="@drawable/rounded_rect"
+        android:backgroundTint="?attr/skeletonTintColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline1"
+        app:layout_constraintStart_toStartOf="@+id/ad_title_view"
+        app:layout_constraintTop_toBottomOf="@+id/ad_body_view" />
+
+    <ImageButton
+        android:id="@+id/ad_close_view"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/extra_small_gap"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_24_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

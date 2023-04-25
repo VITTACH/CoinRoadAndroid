@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackgroundBorderless"
+    android:paddingHorizontal="@dimen/normal_gap">
+
+    <ImageView
+        android:id="@+id/exchange_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_gap"
+        android:layout_marginBottom="@dimen/small_gap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?secondaryTextColor"
+        tools:src="@drawable/ic_24_exchange_default" />
+
+    <TextView
+        android:id="@+id/exchange_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:textAppearance="@style/Text.Body"
+        app:layout_constraintBottom_toTopOf="@id/sync_time"
+        app:layout_constraintStart_toEndOf="@id/exchange_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BitMex" />
+
+    <TextView
+        android:id="@+id/sync_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connection_sync_time"
+        android:textAppearance="@style/Text.Body.Secondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/exchange_name"
+        app:layout_constraintTop_toBottomOf="@id/exchange_name" />
+
+    <TextView
+        android:id="@+id/soon_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choosing_soon"
+        android:textAppearance="@style/Text.Caption.Secondary"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon"
+        style="@style/IconButton.Accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_24_right"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

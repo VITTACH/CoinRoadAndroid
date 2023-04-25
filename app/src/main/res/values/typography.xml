@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?textColor</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="Text.Header">
+        <item name="android:textSize">32sp</item>
+        <item name="lineHeight">40sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">22sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+
+    <style name="Text.Body">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+
+    <style name="Text.Body.Secondary">
+        <item name="android:textColor">?secondaryTextColor</item>
+    </style>
+
+    <style name="Text.Body.Dialog">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+
+    <style name="Text.Body.Snackbar">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="Text.Body.Accent">
+        <item name="android:textColor">?accentColor</item>
+    </style>
+
+
+    <style name="Text.Caption">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="fontFamily">@font/roboto_mono_medium</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="Text.Caption.Accent">
+        <item name="android:textColor">?accentTextColor</item>
+    </style>
+
+    <style name="Text.Caption.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="Text.Caption.ExtraSmall">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="Text.Caption.MostSmall">
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">13sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="Text.Caption.Secondary">
+        <item name="android:textColor">?secondaryTextColor</item>
+    </style>
+
+
+    <style name="Text.Button">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">16sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:letterSpacing">0.035</item>
+    </style>
+
+    <style name="Text.Button.Positive">
+        <item name="android:textColor">?errorColor</item>
+    </style>
+
+    <style name="Text.Button.Negative">
+        <item name="android:textColor">?textColor</item>
+    </style>
+
+    <style name="Text.Button.Snackbar">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:letterSpacing">0.053</item>
+    </style>
+
+</resources>

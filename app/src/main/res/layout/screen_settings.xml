@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?windowBackgroundColor">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_24_back"
+        app:title="@string/settings_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:translationY="@dimen/small_gap"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_view"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_gap"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/big_gap">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/extra_small_gap"
+                android:text="@string/settings_header_main"
+                android:textAppearance="@style/Text.Title"
+                android:textColor="?secondaryTextColor" />
+
+            <include
+                android:id="@+id/layout_period_item"
+                layout="@layout/item_settings_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/layout_theme_item"
+                layout="@layout/item_settings_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize" />
+
+            <include
+                android:id="@+id/layout_height_item"
+                layout="@layout/item_settings_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/graph_view"
+                style="@style/Widget.Coinroad.CardViewButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_gap">
+
+                <ru.mobileup.coinroad.ui.graph.CustomChartView
+                    android:id="@+id/graph_plot"
+                    style="@style/ChartView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:logoVisible="false" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_marginTop="@dimen/normal_gap"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_c"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_gap"
+                android:paddingVertical="@dimen/extra_small_gap"
+                android:text="@string/settings_header_alert"
+                android:textAppearance="@style/Text.Title"
+                android:textColor="?secondaryTextColor" />
+
+            <TextView
+                android:id="@+id/notification_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="?actionBarSize"
+                android:paddingVertical="@dimen/extra_small_gap"
+                android:text="@string/settings_notifications" />
+
+            <include
+                android:id="@+id/layout_alert_sensitive_item"
+                layout="@layout/item_settings_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/medium_gap"
+        android:background="@drawable/bottom_shadow_gradient"
+        android:translationY="-12dp"
+        app:layout_constraintTop_toTopOf="@id/bottom_view" />
+
+    <include
+        android:id="@+id/bottom_view"
+        layout="@layout/item_bottom_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/toolbar_elevation"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

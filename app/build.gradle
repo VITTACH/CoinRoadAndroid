@@ -1,0 +1,240 @@
+plugins {
+    id "com.android.application"
+    id 'kotlin-parcelize'
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "kotlinx-serialization"
+    id "koin"
+    id "com.google.firebase.crashlytics"
+    id "com.google.gms.google-services"
+}
+
+apply from: "../ci.gradle"
+
+def releaseProperties = new Properties()
+rootProject.file("release.properties").withInputStream { releaseProperties.load(it) }
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId "ru.mobileup.coinroad"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionName "1.2.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(releaseProperties['signing.keystore.file'])
+            storePassword releaseProperties['signing.keystore.password']
+            keyAlias releaseProperties['signing.key.alias']
+            keyPassword releaseProperties['signing.key.password']
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".dev"
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
+        }
+        buildTypes.each {
+            it.buildConfigField 'String', "AMPLITUDE_API_KEY", releaseProperties.getProperty("amplitude_api_key", "")
+            it.buildConfigField 'String', "AMPLITUDE_INSTANCE_NAME", '"AMPLITUDE_COINROAD"'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+
+        // for https://github.com/RedMadRobot/figma-export
+        main {
+            res.srcDirs += "src/main/res/figma-export-icons"
+            res.srcDirs += "src/main/res/figma-export-images"
+        }
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion versions.compose
+    }
+
+    buildFeatures {
+        viewBinding = true
+        compose true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+        freeCompilerArgs += "-Xopt-in=kotlin.time.ExperimentalTime"
+        freeCompilerArgs += "-Xuse-experimental=kotlin.Experimental"
+        freeCompilerArgs += "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi"
+        freeCompilerArgs += "-Xuse-experimental=kotlinx.serialization.ExperimentalSerializationApi"
+        freeCompilerArgs += "-Xuse-experimental=org.koin.core.KoinExperimentalAPI"
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            dimension "default"
+            versionNameSuffix "-dev"
+        }
+        prod {
+            dimension "default"
+        }
+    }
+}
+
+dependencies {
+
+    implementation androidx.coreKtx
+    implementation androidx.appCompat
+    implementation androidx.constraintLayout
+    implementation androidx.fragment
+    implementation androidx.recyclerview
+    implementation androidx.swipeRefresh
+
+    coreLibraryDesugaring desugaring
+
+    implementation dateTime
+
+    implementation systemuicontroller
+
+    // Compose
+    implementation compose.ui
+    implementation compose.material
+    implementation compose.preview
+    debugImplementation compose.tooling
+    implementation compose.activity
+
+    // Decompose
+    implementation decompose.core
+    implementation decompose.compose
+
+    // Update from Google Play
+    implementation playCore
+
+    // ViewBinding delegates
+    implementation viewBinding.delegate
+    implementation viewBinding.noreflection
+
+    // Koin
+    implementation koin.core
+    implementation koin.koinWorkManager
+
+    // Dagger
+    implementation dagger.core
+    kapt dagger.daggerСompiler
+    kaptAndroidTest dagger.daggerСompiler
+    implementation dagger.daggerAndroid
+    kapt dagger.daggerAndroidProcessor
+    implementation dagger.daggerAndroidSupport
+
+    // Coroutines
+    implementation coroutines.core
+    implementation coroutines.android
+
+    // Groupie
+    implementation groupie.core
+    implementation groupie.groupieViewbinding
+
+    // WorkManager
+    implementation workRuntime
+
+    // Network
+    implementation network.okhttp
+    implementation network.retrofit
+    implementation network.serializationJson
+    implementation network.serializationConverter
+
+    // Timber
+    implementation timber.core
+    implementation timber.timberkt
+
+    // Lib for Loading, Properties, Dialog, Navigation and etc
+    implementation sesame.property
+    implementation sesame.dialog
+    implementation sesame.navigation
+    implementation sesame.loading
+    implementation sesame.loop
+    implementation sesame.activable
+    implementation sesame.form
+
+    // Lib for graphs rendering
+    implementation androidplot
+
+    // Room
+    implementation room.core
+    kapt room.compiler
+    implementation room.roomKtx
+
+    // DataStore
+    implementation datastore
+
+    // Custom tabs
+    implementation customTabs
+
+    // Firebase
+    implementation firebase.analytics
+    implementation firebase.crashlytics
+
+    // Amplitude
+    implementation amplitude
+
+    // Showcases balloon
+    implementation balloon
+
+    // Flow layouts
+    implementation flowLayout
+
+    // Google
+    implementation google.ads
+    implementation google.billing
+    implementation google.location
+
+    // Glide
+    implementation glide
+
+    // Shimmer
+    implementation shimmer
+
+    // Tests
+    testImplementation tests.koinTest
+    androidTestImplementation tests.koinTest
+    testImplementation tests.coroutinesTest
+    androidTestImplementation tests.junitExt
+    androidTestImplementation tests.testCore
+    androidTestImplementation tests.testRunner
+    androidTestImplementation tests.espresso
+
+    // Hyperion
+    debugImplementation hyperion.core
+    debugImplementation hyperion.attr
+    debugImplementation hyperion.measurement
+    debugImplementation hyperion.recorder
+    debugImplementation hyperion.crash
+    debugImplementation hyperion.disk
+    debugImplementation hyperion.logs
+    debugImplementation hyperion.chucker
+
+    // Chucker
+    debugImplementation chucker.core
+    releaseImplementation chucker.library
+
+    // Falcon screenshots
+    implementation falcon
+
+}

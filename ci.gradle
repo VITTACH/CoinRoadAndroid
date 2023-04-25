@@ -1,0 +1,24 @@
+android.defaultConfig.versionCode = getBuildNumber()
+
+static Integer getBuildNumber() {
+    if (System.env.BUILD_NUMBER != null) {
+        return Integer.parseInt(System.env.BUILD_NUMBER)
+    }
+    return 540
+}
+
+task printVersionName {
+    doLast {
+        String versionName = "Undefined"
+        if (project.hasProperty('flavorNameProp') && flavorNameProp != null) {
+            android.applicationVariants.all { variant ->
+                if (flavorNameProp == variant.flavorName) {
+                    versionName = variant.mergedFlavor.versionName + variant.mergedFlavor.versionNameSuffix
+                }
+            }
+        } else {
+            versionName = android.defaultConfig.versionName + (android.defaultConfig.versionNameSuffix ?: "")
+        }
+        print("versionName \"" + versionName + "\"")
+    }
+}

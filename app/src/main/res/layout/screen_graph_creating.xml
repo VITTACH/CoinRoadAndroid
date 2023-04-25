@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?windowBackgroundColor">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_24_back"
+        tools:title="@string/choosing_hitbtc" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_button"
+        style="@style/Widget.Coinroad.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normal_gap"
+        android:elevation="@dimen/toolbar_elevation"
+        android:text="@string/editing_delete"
+        android:textColor="?errorColor"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/first_currency_button"
+        layout="@layout/layout_currency_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/extra_small_gap"
+        android:layout_marginTop="@dimen/normal_gap"
+        android:layout_marginEnd="@dimen/most_small_gap"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <include
+        android:id="@+id/second_currency_button"
+        layout="@layout/layout_currency_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/most_small_gap"
+        android:layout_marginTop="@dimen/normal_gap"
+        android:layout_marginEnd="@dimen/extra_small_gap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/first_currency_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/big_gap"
+        android:translationY="@dimen/small_gap"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/banner"
+        app:layout_constraintTop_toBottomOf="@+id/first_currency_button"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_currency" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/second_currency_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/big_gap"
+        android:translationY="@dimen/small_gap"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/banner"
+        app:layout_constraintTop_toBottomOf="@+id/first_currency_button" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_c"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ScrollView
+        android:id="@+id/graph_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:translationY="@dimen/small_gap"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/banner"
+        app:layout_constraintTop_toBottomOf="@+id/first_currency_button"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/medium_gap"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/extra_small_gap"
+            android:paddingBottom="@dimen/big_gap">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:orientation="vertical"
+                android:paddingHorizontal="1dp">
+
+                <TextView
+                    android:id="@+id/graph_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/extra_small_gap"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:text="@string/creating_graph"
+                    android:textAppearance="@style/Text.Caption.Secondary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/graph_view"
+                    style="@style/Widget.Coinroad.CardViewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/graph_text">
+
+                    <ru.mobileup.coinroad.ui.graph.CustomChartView
+                        android:id="@+id/graph_plot"
+                        style="@style/ChartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/graph_chart_height"
+                        app:logoVisible="false" />
+                </androidx.cardview.widget.CardView>
+
+                <Spinner
+                    android:id="@+id/chart_type_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/chartTypes"
+                    android:minWidth="@dimen/big_gap"
+                    android:padding="@dimen/normal_gap"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/create_alert_btn"
+                    app:layout_constraintTop_toBottomOf="@id/graph_view" />
+
+                <ImageButton
+                    android:id="@+id/create_alert_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:padding="@dimen/normal_gap"
+                    android:src="@drawable/ic_24_alert_new"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/full_screen_btn"
+                    app:layout_constraintTop_toBottomOf="@id/graph_view" />
+
+                <ImageButton
+                    android:id="@+id/full_screen_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:padding="@dimen/normal_gap"
+                    android:src="@drawable/ic_24_fullscreen_on"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/graph_view" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_small_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/creating_chart_settings"
+                android:textAppearance="@style/Text.Caption.Secondary" />
+
+            <com.nex3z.flowlayout.FlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_gap">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/min_max_btn"
+                    style="@style/Widget.Coinroad.ToggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/small_gap"
+                    android:layout_marginBottom="@dimen/small_gap"
+                    android:text="@string/editing_minmax_visibility"
+                    app:icon="@drawable/ic_24_min_max_price"
+                    app:iconTint="@color/gray_e" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ticker_btn"
+                    style="@style/Widget.Coinroad.ToggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/small_gap"
+                    android:layout_marginBottom="@dimen/small_gap"
+                    android:text="@string/editing_ticker_visibility"
+                    app:icon="@drawable/ic_24_ticker_line"
+                    app:iconTint="@color/gray_e" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/alerts_btn"
+                    style="@style/Widget.Coinroad.ToggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/small_gap"
+                    android:layout_marginBottom="@dimen/small_gap"
+                    android:text="@string/editing_alerts_visibility"
+                    app:icon="@drawable/ic_24_alerts"
+                    app:iconTint="@color/gray_e" />
+
+            </com.nex3z.flowlayout.FlowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/normal_gap"
+                android:background="@color/gray_c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/extra_small_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/creating_update_period"
+                android:textAppearance="@style/Text.Caption.Secondary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/time_toggle_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_gap"
+                android:layout_marginBottom="@dimen/small_gap"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_time_toggle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/normal_gap"
+                android:background="@color/gray_c" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/graph_touch_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/graph_chart_height"
+        android:layout_marginHorizontal="@dimen/extra_small_gap"
+        android:layout_marginTop="76dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/first_currency_button"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/banner"
+        layout="@layout/ad_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/shadow_view" />
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/medium_gap"
+        android:background="@drawable/bottom_shadow_gradient"
+        android:translationY="-12dp"
+        app:layout_constraintTop_toTopOf="@id/bottom_view" />
+
+    <include
+        android:id="@+id/bottom_view"
+        layout="@layout/item_bottom_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="?progressBarColor"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

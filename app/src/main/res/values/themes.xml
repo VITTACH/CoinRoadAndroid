@@ -1,0 +1,110 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.CoinRoad" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">?primaryColor</item>
+        <item name="colorSecondary">?accentColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+        <item name="primaryColor">@color/gray_c</item>
+        <item name="accentColor">@color/green_a</item>
+
+        <item name="android:textViewStyle">@style/Widget.Coinroad.DefaultTextView</item>
+        <item name="materialAlertDialogTheme">@style/CoinRoad.AlertDialog</item>
+        <item name="bottomSheetDialogTheme">@style/CoinRoad.BottomSheet</item>
+
+        <item name="toolbarStyle">@style/Widget.Coinroad.Toolbar</item>
+        <item name="toolbarNavigationButtonStyle">@style/TintedNavigation</item>
+        <item name="toolbarBackgroundColor">@color/black</item>
+        <item name="navbarBackgroundColor">@color/gray_e</item>
+        <item name="statusBarColor">@color/gray_a</item>
+
+        <item name="android:navigationBarColor">?navbarBackgroundColor</item>
+        <item name="android:statusBarColor">?statusBarColor</item>
+
+        <item name="snackbarStyle">@style/Widget.Coinroad.Snackbar</item>
+        <item name="snackbarButtonStyle">@style/Widget.Coinroad.SnackbarButton</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Coinroad.SnackbarText</item>
+        <item name="snackbarBackgroundColor">@color/gray_c</item>
+
+        <item name="tabStyle">@style/Widget.Coinroad.TabLayout</item>
+
+        <item name="dialogBackgroundColor">@color/gray_a</item>
+        <item name="windowBackgroundColor">@color/black</item>
+        <item name="advertBackgroundColor">@color/gray_e</item>
+        <item name="skeletonTintColor">@color/gray_d</item>
+
+        <item name="buttonBackgroundColor">@color/purple_a</item>
+        <item name="secondaryButtonBackgroundColor">@color/gray_a</item>
+        <item name="accentButtonBackgroundColor">@color/green_a</item>
+
+        <item name="textColor">@color/white</item>
+        <item name="textColorSelected">@color/black</item>
+        <item name="secondaryTextColor">@color/gray_b</item>
+        <item name="accentTextColor">@color/green_a</item>
+        <item name="fadeTextColor">@color/gray_e</item>
+        <item name="errorColor">@color/red_a</item>
+
+        <item name="iconColor">@color/gray_enight</item>
+        <item name="progressBarColor">@color/white</item>
+        <item name="actionMenuTextColor">@color/green_a</item>
+
+        <item name="textInputBackgroundColor">@color/gray_d</item>
+
+        <item name="shimmerBaseColor">@color/gray_b</item>
+        <item name="shimmerHighlightColor">@color/gray_a</item>
+
+        <item name="swipeBackgroundColor">@color/red_b</item>
+        <item name="dividerColor">@color/gray_b</item>
+        <item name="borderColor">@color/gray_d</item>
+        <item name="unselectedTabColor">@color/gray_e</item>
+
+        <!-- Chart colors -->
+        <item name="notificationBackgroundColor">@color/gray_a</item>
+        <item name="lineLabelColor">?secondaryTextColor</item>
+        <item name="chartLinesColor">@color/gray_e</item>
+        <item name="increaseCurrencyValueColor">@color/green_a</item>
+        <item name="decreaseCurrencyValueColor">@color/red_a</item>
+        <item name="helpColor">@color/yellow_a</item>
+        <item name="transparentColor">@android:color/transparent</item>
+        <item name="barRisingColor">@color/green_a</item>
+        <item name="barFallingColor">@color/red_a</item>
+        <item name="gradientGreenColor">@color/green_b</item>
+        <item name="gradientRedColor">@color/red_b</item>
+        <item name="gradientBlackColor">@color/gray_b</item>
+    </style>
+
+    <style name="TintedNavigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="tint">?iconColor</item>
+    </style>
+
+    <style name="CoinRoad.BottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Coinroad.BottomSheet</item>
+    </style>
+
+    <style name="Theme.CoinRoad.Launcher" parent="Theme.CoinRoad">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:navigationBarColor">?navbarBackgroundColor</item>
+        <item name="android:statusBarColor">?statusBarColor</item>
+    </style>
+
+    <style name="Theme.CoinRoad.Transparent" parent="Theme.CoinRoad">
+        <item name="android:windowBackground">?transparentColor</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="CoinRoad.AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:windowBackground">?dialogBackgroundColor</item>
+        <item name="android:windowTitleStyle">@style/Text.Body.Dialog</item>
+        <item name="android:textSize">16sp</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Widget.Coinroad.DialogButton.Positive
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Widget.Coinroad.DialogButton.Negative
+        </item>
+    </style>
+
+</resources>

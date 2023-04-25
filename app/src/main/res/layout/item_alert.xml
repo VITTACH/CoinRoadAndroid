@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingHorizontal="@dimen/extra_small_gap"
+    android:foreground="?selectableItemBackgroundBorderless">
+
+    <View
+        android:id="@+id/color_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="2dp"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_gap"
+        android:layout_marginTop="@dimen/small_gap"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text.Body"
+        android:textColor="?secondaryTextColor"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BITSTAMP" />
+
+    <ImageView
+        android:id="@+id/exchange_icon"
+        android:layout_width="@dimen/normal_gap"
+        android:layout_height="@dimen/normal_gap"
+        android:layout_marginStart="@dimen/most_small_gap"
+        app:layout_constraintBottom_toBottomOf="@+id/exchange"
+        app:layout_constraintStart_toEndOf="@+id/exchange"
+        app:layout_constraintTop_toTopOf="@+id/exchange"
+        tools:src="@drawable/ic_bitstamp_dark" />
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Text.Title"
+        app:layout_constraintStart_toStartOf="@id/exchange"
+        app:layout_constraintTop_toBottomOf="@+id/exchange"
+        tools:text="BTC/USD" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/extra_small_gap"
+        android:layout_marginBottom="@dimen/small_gap"
+        android:textAppearance="@style/Text.Caption.Secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/persistent_ic"
+        app:layout_constraintStart_toStartOf="@id/exchange"
+        app:layout_constraintTop_toBottomOf="@+id/symbol"
+        tools:text="note" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_gap"
+        android:layout_marginEnd="@dimen/extra_small_gap"
+        android:textAppearance="@style/Text.Body.Secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/enable_switch"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="11.11.2011 11:11" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/Text.Title"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="500.45" />
+
+    <ImageView
+        android:id="@+id/persistent_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/most_small_gap"
+        app:layout_constraintEnd_toStartOf="@+id/status"
+        app:layout_constraintTop_toTopOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_gap"
+        android:textAppearance="@style/Text.Caption.Accent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        tools:text="Enabled" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/enable_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_gap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

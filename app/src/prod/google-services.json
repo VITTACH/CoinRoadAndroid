@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1033209269548",
+    "firebase_url": "https://coinroad-fe181.firebaseio.com",
+    "project_id": "coinroad-fe181",
+    "storage_bucket": "coinroad-fe181.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033209269548:android:3f06df4b9dbbba31b93089",
+        "android_client_info": {
+          "package_name": "ru.mobileup.coinroad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033209269548-9ep2gpa9fruik2dc7fdn89da83lul10i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs_oJf_I_tgpkjIBbjMi1rNuj0n4jPTh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033209269548-9ep2gpa9fruik2dc7fdn89da83lul10i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033209269548:android:ae595dee59c21f0ab93089",
+        "android_client_info": {
+          "package_name": "ru.mobileup.coinroad.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033209269548-9ep2gpa9fruik2dc7fdn89da83lul10i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs_oJf_I_tgpkjIBbjMi1rNuj0n4jPTh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033209269548-9ep2gpa9fruik2dc7fdn89da83lul10i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

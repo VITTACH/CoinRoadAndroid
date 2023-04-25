@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false" android:state_selected="false">
+        <layer-list>
+            <item android:left="-1000dp" android:right="-1000dp" android:top="-10dp">
+                <shape android:shape="rectangle">
+                    <stroke android:width="2dp" android:color="?attr/unselectedTabColor" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

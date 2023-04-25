@@ -1,0 +1,211 @@
+<resources>
+
+    <!-- System -->
+    <string name="hide">Скрыть</string>
+    <string name="error_retry">Повторить</string>
+    <string name="ok">Ок</string>
+    <string name="quit_toast_msg">Нажмите еще раз для выхода из приложения</string>
+    <string name="minutes">минут</string>
+    <string name="hourses">часов</string>
+    <string name="days">дней</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet_connection">Интернет соединение отключено</string>
+    <string name="error_load_currencies">Не удается загрузить валюты</string>
+    <string name="error_unexpected">Что-то пошло не так</string>
+
+    <!-- Notification channel -->
+    <string name="graphs_channel_name">Канал графиков криптовалют</string>
+    <string name="graphs_channel_description">Показывает графики выбранных криптовалют</string>
+    <string name="alerts_channel_name">Канал уведомлений</string>
+    <string name="alerts_channel_description">Показывает информаицю о достижении цены</string>
+
+    <!-- Main screen -->
+    <string name="main_dashboard">Мой список</string>
+    <string name="main_portfolio">Портфолио</string>
+    <string name="main_trading">Торговля</string>
+    <string name="features_promo_title">
+        Отслеживайте свои позиции криптовалюты на других биржах и кошельках
+    </string>
+    <string name="features_promo_message">
+        Следите за ценами и отслеживайте свою прибыль по более чем 10 000 криптовалют на более чем 500 биржах.
+        \n\nТакже теперь вы можете добавлять виджеты на рабочий стол, а также выставлять уведомления по цене.
+    </string>
+
+    <!-- Portfolio screen -->
+    <string name="portfolio_empty_account_stub">
+        У вас нет подключенных кошельков и бирж. Чтобы создать, нажмите Новое подключение ниже.
+        \n\nБезопасность: ваши ключи API будут храниться локально на вашем устройстве.
+    </string>
+    <string name="portfolio_connections">Подключения</string>
+    <string name="portfolio_new_connection">Новое подключение</string>
+    <string name="portfolio_wallets_header">Кошельки</string>
+    <string name="portfolio_accounts_header">Биржи</string>
+    <string name="portfolio_connected_header">Подключено</string>
+    <string name="portfolio_connections_header">Подключения</string>
+
+    <!-- Connections screen -->
+    <string name="connection_empty_account_stub">
+        У вас нет подключенных аккаунтов бирж. Чтобы создать, нажмите на любой.
+        \n\nБезопасность: ваши ключи API будут храниться локально на вашем устройстве.
+    </string>
+    <string name="connection_sync_time">Последняя синхронизация %s назад</string>
+    <string name="connection_sync_all">Сихронизировать все</string>
+
+    <!-- Exchange choosing screen -->
+    <string name="choosing_subtitle">
+        Простой способ мониторинга динамики изменения курсов криптовалют на экране вашего телефона.
+        \n\nИнформация подтягивается с бирж: KickEX, Hitbtc, Kraken, Binance и Kucoin. Никаких
+        регистраций и аккаунтов не нужно, пользоваться сервисом очень просто, а отслеживать пульс
+        рынка DeFi максимально удобно.
+    </string>
+    <string name="choosing_about">О приложении</string>
+    <string name="choosing_select_exchange">Выберите Биржу</string>
+    <string name="choosing_kickex">KickEX</string>
+    <string name="choosing_kraken">Kraken</string>
+    <string name="choosing_hitbtc">HitBTC</string>
+    <string name="choosing_more_exchange">Еще биржи</string>
+    <string name="choosing_soon">Скоро</string>
+    <string name="choosing_icon_description">Перейти к бирже</string>
+
+    <!-- Graph creating screen -->
+    <string name="creating_currency">Валюты</string>
+    <string name="creating_pair">Пара</string>
+    <string name="creating_select_first_currency">Выбор первой валюты</string>
+    <string name="creating_select_second_currency">Выбор второй валюты</string>
+    <string name="creating_graph">График</string>
+    <string name="creating_chart_settings">Настройки графика</string>
+    <string name="creating_update_period">Период обновления</string>
+    <string name="creating_update_time">Время обновления</string>
+    <string name="actual">Live</string>
+    <string name="minute">мин</string>
+    <string name="creating_add_graph">Добавить график</string>
+    <string name="min_01">01 мин</string>
+    <string name="min_05">05 мин</string>
+    <string name="min_10">10 мин</string>
+    <string name="min_15">15 мин</string>
+    <string name="min_30">30 мин</string>
+    <string name="hour_1">1 час</string>
+
+    <!-- Graph editing screen -->
+    <string name="editing_delete">Удалить</string>
+    <string name="editing_save_changes">Сохранить изменения</string>
+    <string name="editing_minmax_visibility">Min / Max</string>
+    <string name="editing_ticker_visibility">Уровень цены</string>
+    <string name="editing_alerts_visibility">Уведомления</string>
+
+    <!-- Home screen -->
+    <string name="home_about">Информация</string>
+    <string name="home_new_graph">Новый график</string>
+    <string name="home_deeplink_dialog_title">Выбрать приложение</string>
+    <string name="home_deeplink_nothing">Ничего</string>
+
+    <!-- Graph deleting dialog -->
+    <string name="delete_confirm">Вы уверены что хоитте удалить гарфик</string>
+    <string name="cancel">Отмена</string>
+
+    <!-- About screen -->
+    <string name="about_title">CoinRoad. В курсе криптовалют</string>
+    <string name="about_app_info">Сделано с ❤ в MobileUp. Build:\u00A0%s</string>
+    <string name="about_mobileup">MobileUp</string>
+
+    <!-- Alerts screen -->
+    <string name="alerts_title">Уведомления</string>
+    <string name="alerts_create">Новое уведомление</string>
+    <string name="alert_new_title">Новое уведомление</string>
+    <string name="alert_create_alert">Создать уведомление</string>
+    <string name="alert_price_hint">Цена уведомления</string>
+    <string name="alert_price_percent_change">Процентное изменение: %s%%</string>
+    <string name="alert_recent_alerts">Последние уведомления</string>
+    <string name="alert_enabled">Включен</string>
+    <string name="alert_disabled">Выключен</string>
+    <string name="alert_filled">Исполнен</string>
+
+    <!-- Settings screen -->
+    <string name="settings_header_main">Основные настройки</string>
+    <string name="settings_header_alert">Настройки уведомлений</string>
+    <string name="settings_title">Настройки приложения</string>
+    <string name="settings_period">Период обновления: %s</string>
+    <string name="settings_alert_sensitive">Погрешность алерта:</string>
+    <string name="settings_app_theme">Тема: %s</string>
+    <string name="settings_notifications">Настройка экрана блокировки</string>
+    <string name="settings_height">Высота графика: %s</string>
+
+    <!-- Chart resources -->
+    <string name="timestep">%1$02d %2$s</string>
+    <string name="prcentChange">%1$.2f\uFF05</string>
+    <string name="price_flat">\u2B27</string>
+    <string name="price_desc">\u25BC</string>
+    <string name="price_asc">\u25B2</string>
+    <string name="helpHint">••••• 24H</string>
+
+    <!-- Updating -->
+    <string name="update_downloaded">Обновление было успешно скачано</string>
+    <string name="unable_download">Недоступно скачивание обновления</string>
+    <string name="update_install">Установить сейчас</string>
+    <string name="update_retry">Повторить</string>
+
+    <string name="on_tap">Нажатие</string>
+    <string name="add_app">Приложение</string>
+    <string name="show_push">Видимость</string>
+
+    <!-- Showcases -->
+    <string name="showcase_notifications">
+        Включите отображение уведомлений на экране блокировки
+    </string>
+    <string name="showcase_period_change">
+        Вы можете изменить интервал обновления уведомлений чтобы сэкономить трафик и заряд батареи
+    </string>
+    <string name="showcase_graph_visible">
+        Возможность показать график на экране блокировки и шторке уведомлений
+    </string>
+    <string name="showcase_got_it">Понятно</string>
+
+    <!-- Searching -->
+    <string name="search_coins_hint">Поиск по коину</string>
+    <string name="search_price_hint">Поиск по цене</string>
+    <string name="search_charts_hint">Поиск по графику</string>
+
+    <!-- Widget -->
+    <string name="widget_title">Выберите виджет</string>
+    <string name="widget_default_info">Нажмите для установки</string>
+    <string name="widget_failed_connect">Ошибка подключения</string>
+    <string name="large_widget_name">CoinRoad большой</string>
+    <string name="small_widget_name">CoinRoad маленький</string>
+    <string name="widget_ad_info_title">Как выбрать или заменить виджет</string>
+    <string name="widget_ad_info_first_line">
+        Нажмите на график для выбора или замены текущего виджета
+    </string>
+    <string name="widget_ad_info_second_line">
+        Все виджеты имеют единый период обновления который можно изменить в настройках
+    </string>
+    <string name="widget_ad_info_third_line">
+        Только те пары доступны для выбора которые были добавлены в приложение
+    </string>
+
+    <!-- Ads -->
+    <string name="ads_want_your_ad_here">Хочешь рекламу здесь? Напиши zharikov.vitalik@ya.ru</string>
+    <string name="ads_removal_activity_title">Убрат рекламу из приложения</string>
+    <string name="ads_removal_title">Сфокусируйтесь на данных в приложении без рекламы</string>
+    <string name="ads_removal_description">Уберите рекламу и получите больше места на экране</string>
+    <string name="ads_removal_promote">Попробуйте 2 месяца бесплатно</string>
+    <string name="ads_removal_monthly">Месяц</string>
+    <string name="ads_removal_yearly">Год</string>
+    <string name="ads_restore_purchases">Восстановить пукупку</string>
+
+    <!-- Connections -->
+    <string name="account_connect_title">Добавить новый аккаунт</string>
+    <string name="wallet_connect_title">Добавить новый кошелек</string>
+    <string name="account_portfolio_title">Manage account</string>
+    <string name="wallet_portfolio_title">Manage wallet</string>
+
+    <string-array name="applicationThemes">
+        <item>Темная</item>
+        <item>Светлая</item>
+    </string-array>
+
+    <string-array name="chartTypes">
+        <item>Линейный</item>
+        <item>Японские свечи</item>
+    </string-array>
+</resources>

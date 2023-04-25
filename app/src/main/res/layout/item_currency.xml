@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Coinroad.SolidButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackgroundBorderless"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/currency_item_height"
+    android:orientation="horizontal"
+    android:padding="@dimen/normal_gap">
+
+    <TextView
+        android:id="@+id/currency_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="@style/Text.Body"
+        tools:text="Bitcoin" />
+
+    <TextView
+        android:id="@+id/currency_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Text.Caption.Accent"
+        tools:text="BTC" />
+</LinearLayout>

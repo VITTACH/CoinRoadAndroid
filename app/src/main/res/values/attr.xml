@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="windowBackgroundColor" format="color"/>
+    <attr name="snackbarBackgroundColor" format="color"/>
+    <attr name="notificationBackgroundColor" format="color"/>
+    <attr name="dialogBackgroundColor" format="color"/>
+    <attr name="advertBackgroundColor" format="color"/>
+    <attr name="skeletonTintColor" format="color"/>
+
+    <attr name="toolbarBackgroundColor" format="color"/>
+    <attr name="statusBarColor" format="color"/>
+    <attr name="navbarBackgroundColor" format="color"/>
+
+    <attr name="primaryColor" format="color"/>
+    <attr name="accentColor" format="color"/>
+
+    <attr name="shimmerBaseColor" format="color"/>
+    <attr name="shimmerHighlightColor" format="color"/>
+
+    <attr name="secondaryButtonBackgroundColor" format="color"/>
+    <attr name="accentButtonBackgroundColor" format="color"/>
+    <attr name="buttonBackgroundColor" format="color"/>
+
+    <attr name="iconColor" format="color" />
+    <attr name="progressBarColor" format="color" />
+
+    <attr name="transparentColor" format="color" />
+
+    <attr name="textColor" format="color"/>
+    <attr name="textColorSelected" format="color"/>
+    <attr name="secondaryTextColor" format="color"/>
+    <attr name="accentTextColor" format="color"/>
+    <attr name="fadeTextColor" format="color"/>
+    <attr name="errorColor" format="color" />
+
+    <attr name="textInputBackgroundColor" format="color" />
+
+    <attr name="swipeBackgroundColor" format="color"/>
+    <attr name="dividerColor" format="color"/>
+    <attr name="borderColor" format="color"/>
+    <attr name="unselectedTabColor" format="color"/>
+
+    <declare-styleable name="ButtonWithProgressFrame">
+        <attr name="button_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomChartView">
+        <attr name="logoVisible" format="boolean"/>
+        <attr name="chartLinesColor" format="color"/>
+        <attr name="increaseCurrencyValueColor" format="color"/>
+        <attr name="decreaseCurrencyValueColor" format="color"/>
+        <attr name="helpColor" format="color"/>
+        <attr name="gradientGreenColor" format="color"/>
+        <attr name="gradientBlackColor" format="color"/>
+        <attr name="lineLabelColor" format="color"/>
+        <attr name="gradientRedColor" format="color"/>
+        <attr name="barFallingColor" format="color"/>
+        <attr name="barRisingColor" format="color"/>
+    </declare-styleable>
+
+</resources>

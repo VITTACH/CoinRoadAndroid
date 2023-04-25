@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nex3z.flowlayout.FlowLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/extra_small_gap"
+    app:flChildSpacing="auto">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/extra_small_gap"
+        android:layout_marginEnd="@dimen/small_gap"
+        android:layout_marginBottom="@dimen/small_gap"
+        android:text="@string/settings_period" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/extra_small_gap"
+        android:layout_marginTop="@dimen/most_small_gap"
+        android:max="3"
+        android:minWidth="170dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:tickMark="@drawable/seekbar_point"
+        android:tickMarkTint="@color/gray_e" />
+
+</com.nex3z.flowlayout.FlowLayout>

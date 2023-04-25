@@ -1,0 +1,221 @@
+ext {
+
+    versions = [
+            coreKtx               : "1.6.0",
+            appCompat             : "1.3.1",
+            fragment              : "1.3.6",
+            recyclerview          : "1.2.1",
+            material              : "1.4.0",
+            desugaring            : "1.1.5",
+            dateTime              : "0.2.1",
+            playCore              : "1.7.2",
+            coroutines            : "1.5.0",
+            groupie               : "2.9.0",
+            workRuntime           : "2.7.0-alpha04",
+            dagger                : "2.35.1",
+            daggerAndroidProcessor: "2.25.2",
+            daggerAndroidSupport  : "2.23.1",
+            okHttp                : "4.9.2",
+            retrofit              : "2.9.0",
+            viewBinding           : "1.4.6",
+            constraintLayout      : "2.1.1",
+            serializationJson     : "1.1.0",
+            serializationConverter: "0.8.0",
+            daggerСompiler        : "2.25.2",
+            daggerAndroid         : "2.35.1",
+            timber                : "4.7.1",
+            timberKt              : "1.5.1",
+            architecture          : "1.1.0-beta1",
+            hyperion              : "0.9.34",
+            hyperionPlugin        : "0.3.3",
+            swiperefreshlayout    : "1.1.0",
+            glide                 : "4.12.0",
+            androidPlot           : "1.5.7",
+            room                  : "2.4.0-alpha03",
+            espresso              : "3.3.0",
+            androidxTest          : "1.3.0",
+            androidxJunitExt      : "1.1.2",
+            analytics             : "19.0.0",
+            crashlytics           : "18.0.0",
+            chucker               : "3.4.0",
+            datastore             : "1.0.0-alpha06",
+            customTabs            : "1.3.0",
+            amplitude             : "2.23.2",
+            balloon               : "1.3.0",
+            flowLayout            : "1.3.3",
+            googleAds             : "20.4.0",
+            googleBilling         : "4.0.0",
+            googleLocation        : "18.0.0",
+            shimmer               : "0.5.0",
+            falcon                : "2.2.0",
+            decompose             : "0.4.0",
+            systemuicontroller    : "0.20.0",
+            activityCompose       : "1.3.1",
+            compose               : "1.0.4"
+    ]
+
+    material = "com.google.android.material:material:${versions.material}"
+
+    desugaring = "com.android.tools:desugar_jdk_libs:${versions.desugaring}"
+
+    dateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${versions.dateTime}"
+
+    // Update from Google Play
+    playCore = "com.google.android.play:core:${versions.playCore}"
+
+    viewBinding = [
+            delegate    : "com.github.kirich1409:viewbindingpropertydelegate:${versions.viewBinding}",
+            noreflection: "com.github.kirich1409:viewbindingpropertydelegate-noreflection:${versions.viewBinding}"
+    ]
+
+    // Koin
+    koin = [
+            core           : "io.insert-koin:koin-core:${koinVersion}",
+            koinWorkManager: "io.insert-koin:koin-androidx-workmanager:${koinVersion}"
+    ]
+
+    // Dagger
+    dagger = [
+            core                  : "com.google.dagger:dagger:${versions.dagger}",
+            daggerСompiler        : "com.google.dagger:dagger-compiler:${versions.daggerСompiler}",
+            daggerAndroid         : "com.google.dagger:dagger-android:${versions.daggerAndroid}",
+            daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:${versions.daggerAndroidProcessor}",
+            daggerAndroidSupport  : "com.google.dagger:dagger-android-support:${versions.daggerAndroidSupport}"
+    ]
+
+    // Groupie
+    groupie = [
+            core              : "com.github.lisawray.groupie:groupie:${versions.groupie}",
+            groupieViewbinding: "com.github.lisawray.groupie:groupie-viewbinding:${versions.groupie}"
+    ]
+
+    // WorkManager
+    workRuntime = "androidx.work:work-runtime-ktx:${versions.workRuntime}"
+
+    // Network
+    network = [
+            okhttp                : "com.squareup.okhttp3:logging-interceptor:${versions.okHttp}",
+            retrofit              : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            serializationJson     : "org.jetbrains.kotlinx:kotlinx-serialization-json:${versions.serializationJson}",
+            serializationConverter: "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${versions.serializationConverter}"
+    ]
+
+    // Timber
+    timber = [
+            core    : "com.jakewharton.timber:timber:${versions.timber}",
+            timberkt: "com.github.ajalt:timberkt:${versions.timberKt}"
+    ]
+
+    // Lib for Loading, Properties, Dialog, Navigation and etc
+    sesame = [
+            property  : "com.github.aartikov:sesame-property:${versions.architecture}",
+            dialog    : "com.github.aartikov:sesame-dialog:${versions.architecture}",
+            navigation: "com.github.aartikov:sesame-navigation:${versions.architecture}",
+            loading   : "com.github.aartikov:sesame-loading:${versions.architecture}",
+            loop      : "com.github.aartikov:sesame-loop:${versions.architecture}",
+            activable : "com.github.aartikov:sesame-activable:${versions.architecture}",
+            form      : "com.github.aartikov:sesame-form:${versions.architecture}"
+    ]
+
+    systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:${versions.systemuicontroller}"
+
+    decompose = [
+            core   : "com.arkivanov.decompose:decompose:${versions.decompose}",
+            compose: "com.arkivanov.decompose:extensions-compose-jetpack:${versions.decompose}"
+    ]
+
+    compose = [
+            ui      : "androidx.compose.ui:ui:${versions.compose}",
+            material: "androidx.compose.material:material:${versions.compose}",
+            preview : "androidx.compose.ui:ui-tooling-preview:${versions.compose}",
+            tooling : "androidx.compose.ui:ui-tooling:${versions.compose}",
+            activity: "androidx.activity:activity-compose:${versions.activityCompose}"
+    ]
+
+    // Hyperion
+    hyperion = [
+            core       : "com.willowtreeapps.hyperion:hyperion-core:${versions.hyperion}",
+            attr       : "com.willowtreeapps.hyperion:hyperion-attr:${versions.hyperion}",
+            measurement: "com.willowtreeapps.hyperion:hyperion-measurement:${versions.hyperion}",
+            recorder   : "com.willowtreeapps.hyperion:hyperion-recorder:${versions.hyperion}",
+            crash      : "com.willowtreeapps.hyperion:hyperion-crash:${versions.hyperion}",
+            disk       : "com.willowtreeapps.hyperion:hyperion-disk:${versions.hyperion}",
+            logs       : "me.nemiron.hyperion:logs:${versions.hyperionPlugin}",
+            chucker    : "me.nemiron.hyperion:chucker:${versions.hyperionPlugin}"
+    ]
+
+    coroutines = [
+            core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}",
+            android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}",
+    ]
+    androidx = [
+            coreKtx         : "androidx.core:core-ktx:${versions.coreKtx}",
+            appCompat       : "androidx.appcompat:appcompat:${versions.appCompat}",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
+            fragment        : "androidx.fragment:fragment-ktx:${versions.fragment}",
+            recyclerview    : "androidx.recyclerview:recyclerview:${versions.recyclerview}",
+            swipeRefresh    : "androidx.swiperefreshlayout:swiperefreshlayout:${versions.swiperefreshlayout}"
+    ]
+
+    tests = [
+            koinTest      : "io.insert-koin:koin-test:${koinVersion}",
+            espresso      : "androidx.test.espresso:espresso-core:${versions.espresso}",
+            testCore      : "androidx.test:core:${versions.androidxTest}",
+            testRunner    : "androidx.test:runner:${versions.androidxTest}",
+            junitExt      : "androidx.test.ext:junit:${versions.androidxJunitExt}",
+            coroutinesTest: "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutines}"
+    ]
+
+    // Lib for graphs rendering
+    androidplot = "com.androidplot:androidplot-core:${versions.androidPlot}"
+
+    // Glide
+    glide = "com.github.bumptech.glide:glide:${versions.glide}"
+
+    // Room
+    room = [
+            core    : "androidx.room:room-runtime:${versions.room}",
+            compiler: "androidx.room:room-compiler:${versions.room}",
+            roomKtx : "androidx.room:room-ktx:${versions.room}"
+    ]
+
+    // Firebase
+    firebase = [
+            analytics  : "com.google.firebase:firebase-analytics:${versions.analytics}",
+            crashlytics: "com.google.firebase:firebase-crashlytics:${versions.crashlytics}"
+    ]
+
+    // Chucker
+    chucker = [
+            core   : "com.github.chuckerteam.chucker:library:${versions.chucker}",
+            library: "com.github.chuckerteam.chucker:library-no-op:${versions.chucker}"
+    ]
+
+    // DataStore
+    datastore = "androidx.datastore:datastore-preferences:${versions.datastore}"
+
+    // Custom tabs
+    customTabs = "androidx.browser:browser:${versions.customTabs}"
+
+    // Amplitude
+    amplitude = "com.amplitude:android-sdk:${versions.amplitude}"
+
+    // Showcases balloon
+    balloon = "com.github.skydoves:balloon:${versions.balloon}"
+
+    // Flow layouts
+    flowLayout = "com.nex3z:flow-layout:${versions.flowLayout}"
+
+    // Google ads
+    google = [
+            ads     : "com.google.android.gms:play-services-ads:${versions.googleAds}",
+            location: "com.google.android.gms:play-services-location:${versions.googleLocation}",
+            billing : "com.android.billingclient:billing-ktx:${versions.googleBilling}"
+    ]
+
+    // Shimmer
+    shimmer = "com.facebook.shimmer:shimmer:${versions.shimmer}"
+
+    // Falcon screenshots
+    falcon = "com.jraska:falcon:${versions.falcon}"
+}

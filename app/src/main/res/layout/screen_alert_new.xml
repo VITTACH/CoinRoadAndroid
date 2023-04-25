@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?windowBackgroundColor"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_24_close"
+        app:title="@string/alert_new_title" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/exchange_input"
+                style="@style/TextInputLayout.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/extra_small_gap"
+                android:layout_marginTop="@dimen/normal_gap"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/exchange_edit_text"
+                    style="@style/Widget.Coinroad.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:focusable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/price_input"
+                style="@style/TextInputLayout.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/extra_small_gap"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:hint="@string/alert_price_hint"
+                app:endIconMode="clear_text"
+                app:layout_constraintTop_toBottomOf="@id/exchange_input"
+                app:startIconDrawable="@drawable/ic_24_alerts">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/price_edit_text"
+                    style="@style/Widget.Coinroad.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/price_percent_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/normal_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:text="@string/alert_price_percent_change"
+                app:layout_constraintTop_toBottomOf="@+id/price_input" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/percent_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/normal_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/price_percent_change"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_price_percent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/alerts_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/big_gap"
+                android:translationY="@dimen/small_gap"
+                app:layout_constraintBottom_toTopOf="@id/bottom_view"
+                app:layout_constraintTop_toBottomOf="@+id/percent_list"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_alert" />
+
+            <View
+                android:id="@+id/shadow_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/medium_gap"
+                android:background="@drawable/bottom_shadow_gradient"
+                android:translationY="-12dp"
+                app:layout_constraintTop_toTopOf="@id/bottom_view" />
+
+            <include
+                android:id="@+id/bottom_view"
+                layout="@layout/item_bottom_button_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,224 @@
+<resources>
+    <string name="app_name" translatable="false">CoinRoad</string>
+
+    <!-- System -->
+    <string name="hide">Hide</string>
+    <string name="error_retry">Retry</string>
+    <string name="ok">Ok</string>
+    <string name="quit_toast_msg">Click again to quit App</string>
+    <string name="minutes">minutes</string>
+    <string name="hourses">hourses</string>
+    <string name="days">days</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet_connection">The internet connection appears to be offline</string>
+    <string name="error_load_currencies">Can\'t load currencies</string>
+    <string name="error_unexpected">Something went wrong</string>
+
+    <!-- Notification channel -->
+    <string name="graphs_channel_name">Cryptocurrency graphs</string>
+    <string name="graphs_channel_description">Shows information about your crypto pairs</string>
+    <string name="alerts_channel_name">Cryptocurrency alerts</string>
+    <string name="alerts_channel_description">Shows information about your alerts</string>
+
+    <!-- Main screen -->
+    <string name="main_dashboard">My list</string>
+    <string name="main_portfolio">Portfolio</string>
+    <string name="main_trading">Trading</string>
+    <string name="features_promo_title">
+        Track your cryptocurrency positions on other exchanges and wallets
+    </string>
+    <string name="features_promo_message">
+        Watch prices and track your profit for over 10,000 cryptocurrencies across 500+ exchanges.
+        \n\nAlso now you can add widgets on desktop and create price alerts.
+    </string>
+
+    <!-- Portfolio screen -->
+    <string name="portfolio_empty_account_stub">
+        You don’t have any wallets and exchanges connected. To make one, click New connection below.
+        \n\nSecurity: your API key(s) will be stored locally on your device.
+    </string>
+    <string name="portfolio_connections">Connections</string>
+    <string name="portfolio_new_connection">New connection</string>
+    <string name="portfolio_wallets_header">Wallets</string>
+    <string name="portfolio_accounts_header">Exchanges</string>
+    <string name="portfolio_connected_header">Connected</string>
+    <string name="portfolio_connections_header">Connections</string>
+
+    <!-- Connections screen -->
+    <string name="connection_empty_account_stub">
+        You don’t have any exchange connections. To make one, click on some.
+        \n\nSecurity: your API key(s) will be stored locally on your device.
+    </string>
+    <string name="connection_sync_time">Last synced %s ago</string>
+    <string name="connection_sync_all">Sync all</string>
+
+    <!-- Exchange choosing screen -->
+    <string name="choosing_subtitle">
+        The simple way to monitor the dynamic of changes in the rate of cryptocurrency on your phone.
+        \n\nMore than 1,000 types of cryptocurrencies can be tracked. Information is taken from three
+        exchanges: KickEX, Hitbtc and Kraken. It doesn’t require registration, the service is made
+        as simple as possible.
+    </string>
+    <string name="choosing_about">About project</string>
+    <string name="choosing_select_exchange">Select Exchange</string>
+    <string name="choosing_kickex">KickEX</string>
+    <string name="choosing_kraken">Kraken</string>
+    <string name="choosing_hitbtc">HitBTC</string>
+    <string name="choosing_more_exchange">More exchange</string>
+    <string name="choosing_soon">Soon</string>
+    <string name="choosing_icon_description">Go to exchange</string>
+
+    <!-- Graph creating screen -->
+    <string name="creating_currency">Currency</string>
+    <string name="creating_pair">Pair</string>
+    <string name="creating_select_first_currency">Select first currency</string>
+    <string name="creating_select_second_currency">Select second currency</string>
+    <string name="creating_graph">Graph</string>
+    <string name="creating_chart_settings">Chart settings</string>
+    <string name="creating_update_period">Update period</string>
+    <string name="creating_update_time">Update time</string>
+    <string name="actual">Live</string>
+    <string name="minute">min</string>
+    <string name="creating_add_graph">Add graph</string>
+    <string name="min_01">01 min</string>
+    <string name="min_05">05 min</string>
+    <string name="min_10">10 min</string>
+    <string name="min_15">15 min</string>
+    <string name="min_30">30 min</string>
+    <string name="hour_1">1 hour</string>
+
+    <!-- Graph editing screen -->
+    <string name="editing_delete">Delete</string>
+    <string name="editing_save_changes">Save changes</string>
+    <string name="editing_minmax_visibility">Min / Max</string>
+    <string name="editing_ticker_visibility">Ticker line</string>
+    <string name="editing_alerts_visibility">Alerts</string>
+
+    <!-- Home screen -->
+    <string name="home_about">About</string>
+    <string name="home_new_graph">New graph</string>
+    <string name="home_deeplink_dialog_title">Choose Application</string>
+    <string name="home_deeplink_nothing">Nothing</string>
+
+    <!-- Graph deleting dialog -->
+    <string name="delete_confirm">Are you sure you want to delete the graph</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- About screen -->
+    <string name="about_title">CoinRoad. Aware of cryptocurrencies</string>
+    <string name="about_app_info">Made with ❤ by MobileUp. Build:\u00A0%s</string>
+    <string name="about_mobileup">MobileUp</string>
+    <string name="about_credits" translatable="false">
+        Copyright \u00A9 %d by \u0056\u0049\u0054\u0054\u0041\u0043\u0048 zharikov.vitalik@ya.ru
+    </string>
+
+    <!-- Alerts screen -->
+    <string name="alerts_title">Alerts</string>
+    <string name="alerts_create">New alert</string>
+    <string name="alert_new_title">New alert</string>
+    <string name="alert_create_alert">Create alert</string>
+    <string name="alert_price_hint">Alert price</string>
+    <string name="alert_price_percent_change">Percent change: %s%%</string>
+    <string name="alert_recent_alerts">Recent alerts</string>
+    <string name="alert_enabled">Enabled</string>
+    <string name="alert_disabled">Disabled</string>
+    <string name="alert_filled">Filled</string>
+
+    <!-- Settings screen -->
+    <string name="settings_header_main">Main settings</string>
+    <string name="settings_header_alert">Alert settings</string>
+    <string name="settings_title">App settings</string>
+    <string name="settings_period">Update period: %s</string>
+    <string name="settings_alert_sensitive">Alert price error:</string>
+    <string name="settings_app_theme">Theme: %s</string>
+    <string name="settings_notifications">Lock screen settings</string>
+    <string name="settings_height">Chart height: %s</string>
+
+    <!-- Chart resources -->
+    <string name="timestep">%1$02d %2$s</string>
+    <string name="prcentChange">%1$.2f\uFF05</string>
+    <string name="price_flat">\u2B27</string>
+    <string name="price_desc">\u25BC</string>
+    <string name="price_asc">\u25B2</string>
+    <string name="helpHint">••••• 24H</string>
+
+    <!-- Updating -->
+    <string name="update_downloaded">An update has just been downloaded</string>
+    <string name="unable_download">Unable to download update</string>
+    <string name="update_install">Install now</string>
+    <string name="update_retry">Retry</string>
+
+    <string name="on_tap">On tap</string>
+    <string name="add_app">Add app</string>
+    <string name="show_push">Visible</string>
+
+    <!-- Showcases -->
+    <string name="showcase_notifications">
+        Turn on the display of notifications on the lock screen
+    </string>
+    <string name="showcase_period_change">
+        You can change the refresh interval of all notifications to save traffic and battery power
+    </string>
+    <string name="showcase_graph_visible">
+        Enable to show this graph on lockscreen and push notifications
+    </string>
+    <string name="showcase_got_it">Got it</string>
+
+    <!-- Searching -->
+    <string name="search_coins_hint">Searching by coins</string>
+    <string name="search_price_hint">Searching by price</string>
+    <string name="search_charts_hint">Searching by charts</string>
+
+    <!-- Widget -->
+    <string name="widget_title">Select widget</string>
+    <string name="widget_default_info">Tap to setup widget</string>
+    <string name="widget_failed_connect">Failed to connect</string>
+    <string name="large_widget_name">CoinRoad large</string>
+    <string name="small_widget_name">CoinRoad small</string>
+    <string name="widget_ad_info_title">How choose or replace widget</string>
+    <string name="widget_ad_info_first_line">
+        Click on chart to choose or replace current widget
+    </string>
+    <string name="widget_ad_info_second_line">
+        All widgets have a single update period that can be changed in the settings
+    </string>
+    <string name="widget_ad_info_third_line">
+        Only those pairs are available to you that are added in the application
+    </string>
+
+    <!-- Ads -->
+    <string name="ads_want_your_ad_here">Want your ad here? Email me zharikov.vitalik@ya.ru</string>
+    <string name="ads_removal_activity_title">Remove Ads from App</string>
+    <string name="ads_removal_title">Focus on data with Ad\u2011Free App Version</string>
+    <string name="ads_removal_description">Remove ads and get more room on screen for your watchlist pairs</string>
+    <string name="ads_removal_promote">Get 2 months free</string>
+    <string name="ads_removal_monthly">Month</string>
+    <string name="ads_removal_yearly">Year</string>
+    <string name="ads_restore_purchases">Restore purchases</string>
+
+    <!-- Connections -->
+    <string name="account_connect_title">Add new account</string>
+    <string name="wallet_connect_title">Add new wallet</string>
+    <string name="account_portfolio_title">Manage account</string>
+    <string name="wallet_portfolio_title">Manage wallet</string>
+
+    <string-array name="applicationThemes">
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+
+    <string-array name="chartTypes">
+        <item>Linear</item>
+        <item>Candlestick</item>
+    </string-array>
+
+    <string-array name="alertSensitives">
+        <item>0 %</item>
+        <item>1 %</item>
+        <item>2 %</item>
+        <item>3 %</item>
+        <item>4 %</item>
+        <item>5 %</item>
+    </string-array>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="most_small_gap">4dp</dimen>
+    <dimen name="extra_small_gap">8dp</dimen>
+    <dimen name="small_gap">12dp</dimen>
+    <dimen name="normal_gap">16dp</dimen>
+    <dimen name="medium_gap">24dp</dimen>
+    <dimen name="big_gap">41dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="text_button_min_height">20dp</dimen>
+    <dimen name="toggle_button_min_height">40dp</dimen>
+    <dimen name="solid_button_min_height">52dp</dimen>
+
+    <!-- Adverts -->
+    <dimen name="advert_item_height">72dp</dimen>
+    <dimen name="advert_image_height">56dp</dimen>
+
+    <!-- Chart -->
+    <dimen name="small_corner_radius">8dp</dimen>
+    <dimen name="graph_chart_height">132dp</dimen>
+    <dimen name="graph_chart_full_height">280dp</dimen>
+
+    <!-- Showcases -->
+    <dimen name="showcase_min_height">99dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_elevation">7dp</dimen>
+    <dimen name="toolbar_no_elevation">0dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_title_margin">24dp</dimen>
+    <dimen name="toolbar_logo_margin">28dp</dimen>
+
+    <!-- Common -->
+    <dimen name="edit_text_height">52dp</dimen>
+    <dimen name="currency_item_height">56dp</dimen>
+
+</resources>

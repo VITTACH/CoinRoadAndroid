@@ -1,0 +1,2 @@
+rootProject.name = "CoinRoad"
+include ':app'
